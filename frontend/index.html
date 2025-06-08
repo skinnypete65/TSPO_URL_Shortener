@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="app_icon.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>URL shortener</title>
+</head>
+<body>
+<div class="main_container">
+    <h1>Сокращатель ссылок</h1>
+
+    <label for="url_input"></label>
+    <input id="url_input" class="form-control" placeholder="Ссылка" type="text"/>
+    <a id="shorten" class="shorten_btn" onclick="onShortenerClick()">Сократить</a>
+    <br>
+    <br>
+    <p class="short_url">Короткая ссылка:</p>
+    <p id="short_url" class="short_url" style="visibility: hidden"></p>
+
+    <br>
+    <a id="copy" style="visibility: hidden" class="shorten_btn" onclick="copyToClipboard()">Копировать</a>
+    <br>
+    <br>
+
+    <h1>Популярные ссылки</h1>
+    <table style="width:100%" id="top_urls_table">
+        <tr>
+            <th style="width:60%" >Исходная ссылка</th>
+            <th style="width:20%">Сокращенная ссылка</th>
+            <th style="width:10%">Кол-во переходов</th>
+            <th style="width:10%">Кол-во сокращений</th>
+        </tr>
+    </table>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
